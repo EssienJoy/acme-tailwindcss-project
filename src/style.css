@@ -1,0 +1,75 @@
+@import "tailwindcss";
+
+@theme {
+    /* Break Points */
+
+    --breakpoint-desktop: 48rem;
+    /* Applies to styles above 768px  >= 768px */
+
+    --breakpoint-tablet: 35rem;
+    /* Applies to Styles above 560px */
+
+    /* Fonts */
+    --font-display: "Satoshi", "sans-serif";
+
+}
+
+/* Block Quotes Styles */
+@layer components {
+    #quote-container {
+        @apply relative;
+    }
+
+    #quote-container::before {
+        content: "\201C";
+        @apply absolute -top-15 -left-13 text-9xl font-serif text-white opacity-25 transform translate-x-2 translate-y-2;
+    }
+
+    #quote-container::after {
+        content: "\201D";
+        @apply absolute -bottom-25 -right-9 text-9xl font-serif text-white opacity-25 transform translate-x-2 translate-y-2;
+    }
+}
+
+/* Hamburger Menu Styles */
+@layer components {
+    .hamburger-menu {
+        @apply bg-white w-full h-1 rounded-2xl
+    }
+}
+
+/* Line-break Styles */
+@layer components {
+    .line-break {
+        @apply mx-auto w-1/2 bg-black dark:bg-white;
+    }
+}
+
+/* Rocket Border Styles*/
+@layer components {
+    .rocket-border {
+        @apply dark:border-white border-black shadow-lg border-solid border-1 rounded-3xl pt-6 pb-6 pl-2 pr-2 flex flex-col items-center
+    }
+}
+
+/* Dollar Paragraph */
+@layer components {
+    .dollar-p {
+        @apply text-3xl text-slate-500 dark:text-slate-400;
+    }
+}
+
+/* H2 Styles */
+@layer components {
+    .heading2 {
+        @apply text-center text-4xl tablet:text-5xl font-bold dark:text-white text-slate-900;
+    }
+}
+
+/* Block Quote Background */
+
+@layer components {
+    .bg-blockquote {
+        @apply bg-teal-600 dark:bg-black rounded-2xl p-12;
+    }
+}
